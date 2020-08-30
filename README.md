@@ -21,6 +21,7 @@ priority   ticks
 2          16
 1          32
 At level 0 it executes the process until completion or interrupted by a higher priority process, or the process yields the CPU.
+
 • If a process voluntarily relinquishes the CPU before its time-slice expires at a particular priority level, its time-slice should not be reset; the next time that that process is scheduled, it will continue to use the remainder of its existing time-slice at that priority level.
 
 I implemented additional system calls: 
